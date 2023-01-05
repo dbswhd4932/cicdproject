@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
-REPOSITORY=/home/ubuntu
+REPOSITORY=/home/ubuntu/build/libs
 cd $REPOSITORY
 
-JAR_NAME=$(ls $REPOSITORY/ | grep 'SNAPSHOT.jar' | tail -n 1)
+JAR_NAME=$(ls $REPOSITORY/ | grep 'cicdproject-0.0.1-SNAPSHOT.jar' | tail -n 1)
 echo "$JAR_NAME"
 JAR_PATH=$REPOSITORY/$JAR_NAME
 echo "$JAR_PATH"

@@ -1,19 +1,18 @@
 #!/usr/bin/env bash
 
-REPOSITORY=/home/ubuntu/
+REPOSITORY=/home/ubuntu/build/libs
 cd $REPOSITORY
 
-APP_NAME=cicdapp
-JAR_NAME=$(ls $REPOSITORY | grep 'cicdproject-0.0.1-SNAPSHOT.jar' | tail -n 1)
+JAR_NAME=$(ls $REPOSITORY/ | grep 'SNAPSHOT.jar' | tail -n 1)
 echo "$JAR_NAME"
 JAR_PATH=$REPOSITORY/$JAR_NAME
 echo "$JAR_PATH"
 
-CURRENT_PID=$(pgrep -f $APP_NAME)
+CURRENT_PID=$(pgrep -f jar)
 
 if [ -z $CURRENT_PID ]
 then
-  echo "> 종료할것 없음."
+  echo "> Nothing to end."
 else
   echo "> kill -9 $CURRENT_PID"
   kill -15 $CURRENT_PID
@@ -21,4 +20,4 @@ else
 fi
 
 echo "> $JAR_PATH deploy"
-nohup java -jar $JAR_PATH > /dev/null 2> /dev/null < /dev/null &
+nohup java -jar $JAR_PATH --spring.profiles.active=dev > /dev/null 2> /dev/null < /dev/null &

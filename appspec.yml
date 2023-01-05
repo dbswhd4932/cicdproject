@@ -4,19 +4,15 @@ os: linux
 
 files:
   - source: /
-    destination: /home/ubuntu/cicdproject
-    overwrite: yes
+    destination: /home/ubuntu/cicdproject/build/libs
 permissions:
   - object: /
     pattern: "**"
     owner: ubuntu
     group: ubuntu
+    mode: 755
 hooks:
-  AfterInstall:
-    - location: scripts/stop.sh
-      timeout: 60
-      runas: ubuntu
   ApplicationStart:
-    - location: scripts/start.sh
+    - location: deploy.sh
       timeout: 60
       runas: ubuntu

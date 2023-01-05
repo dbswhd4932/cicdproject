@@ -35,6 +35,9 @@ jobs:
       - name: Make Zip File
         run: zip -qq -r ./$GITHUB_SHA.zip .
         shell: bash
+        
+      - name: Test with Gradle
+        run: ./gradlew --info test
       
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1

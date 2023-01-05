@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
-REPOSITORY=/home/ubuntu/cicdproject/build/libs
+REPOSITORY=/home/ubuntu/cicdproject/build/libs/build/libs
 cd $REPOSITORY
 
-APP_NAME=greenstep
+APP_NAME=cicdapp
 JAR_NAME=$(ls $REPOSITORY | grep 'cicdproject-0.0.1-SNAPSHOT.jar' | tail -n 1)
 echo "$JAR_NAME"
 JAR_PATH=$REPOSITORY/$JAR_NAME

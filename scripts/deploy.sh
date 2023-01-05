@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-REPOSITORY=/home/ubuntu/app
+REPOSITORY=/home/ubuntu/cicdproject
 cd $REPOSITORY
 
 APP_NAME=greenstep

@@ -3,9 +3,9 @@ os: linux
 
 files:
   - source: /
-    destination: /home/ubuntu/app
+    destination: /home/ubuntu/cicdproject
 permissions:
-  - object: /home/ubuntu/app
+  - object: /home/ubuntu/cicdproject
     owner: ubuntu
     group: ubuntu
 hooks:

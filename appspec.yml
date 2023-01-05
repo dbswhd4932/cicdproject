@@ -4,7 +4,7 @@ os: linux
 
 files:
   - source: /
-    destination: /home/ubuntu/cicdproject/build/libs
+    destination: /home/ubuntu/
     overwrite : yes
 permissions:
   - object: /

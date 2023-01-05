@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-REPOSITORY=/home/ubuntu/cicdproject/build/libs/build/libs
+REPOSITORY=/home/ubuntu/
 cd $REPOSITORY
 
 APP_NAME=cicdapp
